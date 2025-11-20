@@ -5,6 +5,11 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/Ak47-369/central-config-server.git
+          uri: ${GITHUB_REPO_URL}
+          default-label: main
+          search-paths: '*/**'
+          username: ${GITHUB_USERNAME}
+          password: ${GITHUB_PASSWORD}
+          clone-on-start: true
 server:
   port: 8888
