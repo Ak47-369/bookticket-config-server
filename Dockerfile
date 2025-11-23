@@ -16,6 +16,7 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
 EXPOSE 8888
+ENV SERVER_PORT=${PORT:-8888}
 # LIMIT MEMORY: Critical for Render Free Tier (512MB limit)
 # 350MB heap + 50MB overhead = 400MB total
 ENV JAVA_TOOL_OPTIONS="-Xmx350m -Xms350m"
