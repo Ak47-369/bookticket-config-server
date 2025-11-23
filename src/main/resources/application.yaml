@@ -11,5 +11,14 @@ spring:
           username: ${GITHUB_USERNAME}
           password: ${GITHUB_PASSWORD}
           clone-on-start: true
+management:
+  metrics:
+    export:
+      otlp:
+        enabled: true
+loki:
+  url: ${LOKI_URL}
+  username: ${LOKI_USERNAME}
+  password: ${LOKI_PASSWORD}
 server:
   port: 8888
