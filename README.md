@@ -17,29 +17,6 @@ This service uses Spring Cloud Config Server.
 
 <img width="1119" height="784" alt="Config-Server-Architecture" src="https://github.com/user-attachments/assets/2809fa3c-ad5d-44b0-81ad-4f59fe0826af" />
 
-```mermaid
----
-config:
-  theme: redux
----
-flowchart TB
- subgraph subGraph0["Cloud Environment (Render)"]
-        C("Config Server")
-        A["API Gateway"]
-        B["User Service"]
-        D["Other Services"]
-  end
- subgraph Infrastructure["Infrastructure"]
-        E["Git Repository (central-config-server)"]
-  end
-    A --> C
-    B --> C
-    D --> C
-    C --> Infrastructure
-
-    style C fill:#f9f,stroke:#333,stroke-width:2px
-    style E fill:#ccf,stroke:#333,stroke-width:2px
-```
 
 ### How It Works
 
